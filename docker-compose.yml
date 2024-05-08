@@ -9,13 +9,14 @@ services:
     configs:
       - source: hapi
         target: /app/config/application.yaml
-      - source: hapi-extra-classes
-        target: /app/extra-classes
     depends_on:
       - db
 
+
   db:
     image: postgres
+    ports:
+      - "5432:5432"
     restart: always
     environment:
       POSTGRES_PASSWORD: admin
@@ -27,5 +28,3 @@ services:
 configs:
   hapi:
      file: ./hapi.application.yaml
-  hapi-extra-classes:
-     file: ./hapi-extra-classes
