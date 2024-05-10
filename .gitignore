@@ -169,4 +169,4 @@ Temporary Items
 # Helm Chart dependencies
 **/charts/*.tgz
 
-./hapi.postgress.data*
+./hapi.postgress.data/*
