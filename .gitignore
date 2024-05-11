@@ -1,3 +1,7 @@
+# postgress data
+./hapi.postgress.data
+hapi.postgress.data/*
+
 *.orig
 target/
 *.iml
@@ -169,5 +173,3 @@ Temporary Items
 # Helm Chart dependencies
 **/charts/*.tgz
 
-# postgress data
-./hapi.postgress.data
