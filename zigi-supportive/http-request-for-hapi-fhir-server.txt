@@ -1,0 +1,66 @@
+
+
+
+$   curl -i -X POST "http://localhost:8080/fhir/Questionnaire" \                                                                3 ↵
+-H "accept: application/json" \
+-H "Content-Type: application/fhir+json" -d '
+{
+  "resourceType": "Questionnaire",
+  "status": "draft",
+  "title": "Integer Required Questionnaire",
+  "url": "http://visiontree.com/fhir/Questionnaire/Zigi-Test-Questionnaire-1",
+  "id": "integer-required-questionnaire",
+  "version": "0.0.0",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Integer Required Examples",
+      "type": "group",
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "1.1",
+          "text": "Pick a required number value",
+          "type": "integer",
+          "required": true
+        }
+      ]
+    }
+  ]
+}'
+HTTP/1.1 201 
+X-Powered-By: HAPI FHIR 7.0.2 REST Server (FHIR Server; FHIR 4.0.1/R4)
+ETag: W/"1"
+X-Request-ID: zUNncHhO1XXgf1MW
+Content-Location: http://localhost:8080/fhir/Questionnaire/2/_history/1
+Last-Modified: Mon, 13 May 2024 18:07:13 GMT
+Location: http://localhost:8080/fhir/Questionnaire/2/_history/1
+Content-Type: application/fhir+json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 13 May 2024 18:07:13 GMT
+
+{
+  "resourceType": "Questionnaire",
+  "id": "2",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2024-05-13T18:07:13.754+00:00",
+    "source": "#zUNncHhO1XXgf1MW"
+  },
+  "url": "http://visiontree.com/fhir/Questionnaire/Zigi-Test-Questionnaire-1",
+  "version": "0.0.0",
+  "title": "Integer Required Questionnaire",
+  "status": "draft",
+  "item": [ {
+    "linkId": "1",
+    "text": "Integer Required Examples",
+    "type": "group",
+    "repeats": false,
+    "item": [ {
+      "linkId": "1.1",
+      "text": "Pick a required number value",
+      "type": "integer",
+      "required": true
+    } ]
+  } ]
+}% 

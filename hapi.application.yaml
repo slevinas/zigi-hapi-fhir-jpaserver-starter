@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: 'jdbc:postgresql://host.docker.internal:5432/hapi'
+    url: 'jdbc:postgresql://db:5432/hapi'
     username: admin
     password: admin
     driverClassName: org.postgresql.Driver
@@ -8,3 +8,12 @@ spring:
     properties:
       hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
       hibernate.search.enabled: false
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        jdbc: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type: trace
