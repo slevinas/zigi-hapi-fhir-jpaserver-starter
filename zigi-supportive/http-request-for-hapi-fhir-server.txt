@@ -66,3 +66,36 @@ Date: Mon, 13 May 2024 18:07:13 GMT
 }% 
 
 // Using the following:
+
+To change the default branch of your forked GitHub repository and delete the old master branch, follow these steps:
+
+1. Set Your New Branch as Default
+Navigate to Your Repository on GitHub.
+Go to Settings:
+Click on the Settings tab in your repository.
+Set Default Branch:
+Under Branches, find the Default branch section.
+Select your new branch from the dropdown and click Update.
+2. Delete the Old Master Branch
+Go to Branches:
+Still under the Branches section in Settings.
+Delete the Old Branch:
+Find the master branch in the list.
+Click the trash can icon next to it to delete.
+Command Line Alternative
+You can also achieve this via the command line:
+
+sh
+Copy code
+# Make sure you are on your new branch
+git checkout my-new-branch
+
+# Push the new branch and set upstream
+git push -u origin my-new-branch
+
+# Set the new branch as default
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/zigi-hapi-test1
+
+# Delete the master branch locally and remotely
+git branch -d master
+git push origin --delete master
